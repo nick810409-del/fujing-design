@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="富璟設計有限公司 — 專業室內設計，住宅、商業與餐廳空間規劃，以細膩工藝與溫暖質感打造獨一無二的生活美學。">
+<meta name="keywords" content="室內設計,富璟設計,住宅設計,商業空間,餐廳設計,空間規劃,台灣設計">
+<meta property="og:title" content="富璟設計有限公司 — FUJING DESIGN">
+<meta property="og:description" content="以精準工藝與溫暖質感，打造獨一無二的生活美學">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fujingdesign.com.tw">
+<meta name="theme-color" content="#0A0A0A">
+<title>富璟設計有限公司 — FUJING DESIGN</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Noto+Sans+TC:wght@200;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700&display=swap');
+/* Microsoft JhengHei fallback handled via font stack */
+
+:root {
+  --black: #0A0A0A;
+  --dark: #141414;
+  --dark2: #1C1C1C;
+  --dark3: #242424;
+  --mid-dark: #3A3A3A;
+  --mid: #6A6A6A;
+  --light-mid: #9A9A9A;
+  --light: #C8C0B0;
+  --cream: #F0EBE0;
+  --cream2: #F8F4EC;
+  --warm-white: #FDFAF5;
+  --gold: #C9A96E;
+  --gold2: #E8D5A8;
+  --gold-dim: rgba(201,169,110,0.15);
+  --border-dark: rgba(255,255,255,0.07);
+  --border-light: rgba(201,169,110,0.2);
+  --shadow: 0 24px 80px rgba(0,0,0,0.4);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  background: var(--black);
+  color: var(--cream);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ─── CURSOR ─── */
+#cur { position:fixed; width:8px; height:8px; background:var(--gold); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:transform 0.12s, background 0.2s; }
+#cur-ring { position:fixed; width:40px; height:40px; border:1px solid rgba(201,169,110,0.5); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:left 0.1s ease, top 0.1s ease, width 0.3s, height 0.3s, opacity 0.3s; }
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width:3px; }
+::-webkit-scrollbar-track { background:var(--dark); }
+::-webkit-scrollbar-thumb { background:var(--gold); border-radius:3px; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:200;
+  padding: 0 60px;
+  height: 92px;
+  display: flex; align-items:center; justify-content:space-between;
+  transition: background 0.5s, border-color 0.5s;
+}
+nav.scrolled {
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-dark);
+}
+.nav-logo {
+  display:flex; flex-direction:column; gap:2px;
+  text-decoration:none;
+}
+.nav-logo-cn {
+  font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+  font-size: 26px;
+  font-weight: 300;          /* 極細宋體，優雅不呆板 */
+  color: var(--cream);
+  letter-spacing: 8px;       /* 字距拉開，頂級品牌感 */
+  line-height: 1.15;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+/* 「設」字後不加字距（視覺平衡） */
+.nav-logo-cn::after { content:''; letter-spacing:0; }
+.nav-logo-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--gold);
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  opacity: 0.85;
+}
+.nav-center {
+  display:flex; gap:40px; list-style:none;
+  position:absolute; left:50%; transform:translateX(-50%);
+}
+.nav-center a {
+  display:flex; flex-direction:column; align-items:center; gap:2px;
+  text-decoration:none;
+}
+.nav-center a .en {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:13px; font-weight:500;
+  color:var(--gold); letter-spacing:3px;
+  text-transform:uppercase;
+  transition:color 0.2s;
+}
+.nav-center a .zh {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:11px; font-weight:300;
+  color:var(--light-mid); letter-spacing:2px;
+  transition:color 0.2s;
+}
+.nav-center a:hover .en { color:var(--cream); }
+.nav-center a:hover .zh { color:var(--light); }
+.nav-right { display:flex; align-items:center; gap:20px; }
+.lang-row { display:flex; gap:1px; }
+.lang-btn {
+  background:none; border:none;
+  font-size:12px; letter-spacing:2px;
+  color:var(--light-mid); cursor:none;
+  padding:6px 10px;
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-weight:400;
+  transition:color 0.2s;
+  position:relative;
+}
+.lang-btn::after { content:''; position:absolute; bottom:2px; left:10px; right:10px; height:1px; background:var(--gold); transform:scaleX(0); transition:transform 0.2s; }
+.lang-btn.active { color:var(--gold); }
+.lang-btn.active::after { transform:scaleX(1); }
+.nav-system {
+  border:1px solid var(--border-light);
+  border-radius:2px;
+  padding:10px 20px;
+  font-size:13px; font-weight:500;
+  color:var(--gold); letter-spacing:2px;
+  text-decoration:none;
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  transition:all 0.3s;
+  text-transform:uppercase;
+}
+.nav-system:hover { background:var(--gold); color:var(--black); }
+
+/* ─── HERO ─── */
+#hero {
+  min-height:100vh;
+  display:flex; flex-direction:column;
+  justify-content:flex-end;
+  padding: 0 60px 80px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg {
+  position:absolute; inset:0;
+  background: linear-gradient(160deg, #1A1510 0%, #0A0A0A 50%, #0F0D0A 100%);
+}
+.hero-bg-lines {
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(201,169,110,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,110,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.hero-bg-glow {
+  position:absolute;
+  top: 20%; right:10%;
+  width:600px; height:600px;
+  background:radial-gradient(ellipse, rgba(201,169,110,0.06) 0%, transparent 65%);
+  pointer-events:none;
+}
+.hero-num {
+  position:absolute;
+  right:60px; top:50%;
+  transform:translateY(-50%);
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(120px,16vw,220px);
+  font-weight:300;
+  color:rgba(201,169,110,0.04);
+  line-height:1;
+  letter-spacing:-8px;
+  user-select:none;
+}
+.hero-content { position:relative; z-index:2; max-width:760px; }
+.hero-eyebrow {
+  display:flex; align-items:center; gap:16px;
+  margin-bottom:32px;
+}
+.hero-eyebrow-line { width:48px; height:1px; background:var(--gold); }
+.hero-eyebrow-text {
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px; font-weight:300;
+  color:var(--gold); letter-spacing:5px;
+  text-transform:uppercase;
+}
+.hero-h1-zh {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:clamp(42px,6vw,86px);
+  font-weight:300;
+  color:var(--cream);
+  line-height:1.25;
+  letter-spacing:6px;
+  margin-bottom:8px;
+}
+.hero-h1-en {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(18px,2.5vw,32px);
+  font-weight:300; font-style:italic;
+  color:var(--light-mid);
+  letter-spacing:3px;
+  margin-bottom:40px;
+}
+.hero-desc {
+  font-size:14px; font-weight:300;
+  line-height:2.2; color:var(--light-mid);
+  max-width:480px; margin-bottom:52px;
+  letter-spacing:1px;
+}
+.hero-cta { display:flex; gap:20px; align-items:center; }
+.btn-gold {
+  background:var(--gold);
+  color:var(--black);
+  border:none; border-radius:2px;
+  padding:16px 36px;
+  font-size:12px; font-weight:500;
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  letter-spacing:3px;
+  text-decoration:none;
+  cursor:none;
+  transition:background 0.3s, transform 0.2s;
+}
+.btn-gold:hover { background:var(--gold2); transform:translateY(-2px); }
+.btn-ghost {
+  background:none; color:var(--cream);
+  border:1px solid rgba(240,235,224,0.2);
+  border-radius:2px;
+  padding:15px 32px;
+  font-size:12px; font-weight:300;
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  letter-spacing:3px;
+  text-decoration:none;
+  cursor:none;
+  transition:border-color 0.3s, color 0.3s;
+}
+.btn-ghost:hover { border-color:var(--gold); color:var(--gold); }
+.hero-scroll {
+  position:absolute; right:60px; bottom:80px;
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  z-index:2;
+}
+.hero-scroll-text {
+  font-family:'Cormorant Garamond',serif;
+  font-size:10px; letter-spacing:4px;
+  color:var(--light-mid); text-transform:uppercase;
+  writing-mode:vertical-rl;
+}
+.hero-scroll-line {
+  width:1px; height:60px;
+  background:linear-gradient(to bottom, var(--gold), transparent);
+  animation:scrollLine 2s ease-in-out infinite;
+}
+@keyframes scrollLine { 0%,100%{height:60px;opacity:1} 50%{height:30px;opacity:0.4} }
+
+/* ─── MARQUEE ─── */
+.marquee-wrap {
+  overflow:hidden;
+  border-top:1px solid var(--border-dark);
+  border-bottom:1px solid var(--border-dark);
+  padding:18px 0;
+  background:var(--dark);
+}
+.marquee-track {
+  display:flex; gap:0;
+  animation:marquee 22s linear infinite;
+  white-space:nowrap;
+}
+.marquee-item {
+  display:inline-flex; align-items:center; gap:32px;
+  padding:0 32px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px; font-weight:300;
+  color:var(--light-mid); letter-spacing:4px;
+  text-transform:uppercase;
+}
+.marquee-dot { width:4px; height:4px; background:var(--gold); border-radius:50%; flex-shrink:0; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ─── SECTION BASE ─── */
+.section { padding:120px 60px; }
+.section-inner { max-width:1400px; margin:0 auto; }
+.s-tag {
+  display:inline-flex; align-items:center; gap:14px;
+  margin-bottom:20px;
+}
+.s-tag-line { width:32px; height:1px; background:var(--gold); }
+.s-tag-text {
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px; font-weight:300;
+  color:var(--gold); letter-spacing:5px;
+  text-transform:uppercase;
+}
+.s-title-zh {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:clamp(28px,3.5vw,48px);
+  font-weight:300;
+  color:var(--cream);
+  line-height:1.5;
+  letter-spacing:4px;
+  margin-bottom:8px;
+}
+.s-title-en {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(14px,1.5vw,18px);
+  font-weight:300; font-style:italic;
+  color:var(--light-mid);
+  letter-spacing:3px;
+  margin-bottom:60px;
+}
+
+/* ─── ABOUT ─── */
+#about { background:var(--dark); }
+.about-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:100px; align-items:center;
+}
+.about-visual { position:relative; }
+.about-main-img {
+  width:100%; aspect-ratio:3/4;
+  background:linear-gradient(145deg, #2A2018, #1A150E);
+  border:1px solid var(--border-dark);
+  display:flex; align-items:center; justify-content:center;
+  font-size:64px;
+  position:relative; overflow:hidden;
+}
+.about-main-img::after {
+  content:'';
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(10,10,10,0.6), transparent);
+}
+.about-float-card {
+  position:absolute;
+  bottom:-30px; right:-30px;
+  background:var(--dark2);
+  border:1px solid var(--border-light);
+  padding:28px 32px;
+  min-width:160px;
+}
+.about-float-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:52px; font-weight:300;
+  color:var(--gold); line-height:1;
+}
+.about-float-label {
+  font-size:11px; font-weight:300;
+  color:var(--light-mid); letter-spacing:2px;
+  margin-top:6px;
+}
+.about-text-body {
+  font-size:14px; font-weight:300;
+  line-height:2.4; color:var(--light-mid);
+  letter-spacing:1px; margin-bottom:24px;
+}
+.about-quote {
+  border-left:2px solid var(--gold);
+  padding:20px 28px;
+  margin:36px 0;
+  background:var(--gold-dim);
+}
+.about-quote-text {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:16px; font-weight:300;
+  color:var(--cream); line-height:2;
+  letter-spacing:2px; font-style:italic;
+}
+.about-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:48px; background:var(--border-dark); }
+.about-stat { background:var(--dark); padding:24px; text-align:center; }
+.about-stat-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:36px; font-weight:300;
+  color:var(--gold); display:block;
+}
+.about-stat-label { font-size:11px; color:var(--light-mid); letter-spacing:1px; margin-top:4px; }
+
+/* ─── SERVICES ─── */
+#services { background:var(--black); }
+.services-list { display:flex; flex-direction:column; gap:0; }
+.service-row {
+  display:grid; grid-template-columns:80px 1fr 1fr auto;
+  align-items:center; gap:60px;
+  padding:48px 0;
+  border-bottom:1px solid var(--border-dark);
+  cursor:none;
+  transition:background 0.4s ease;
+  position:relative;
+  overflow:hidden;
+}
+/* 冰磚藍色 hover 背景 */
+.service-row::before {
+  content:'';
+  position:absolute; left:-60px; right:-60px; top:0; bottom:0;
+  background:linear-gradient(135deg,
+    rgba(30,60,100,0.55) 0%,
+    rgba(255,255,255,0.04) 40%,
+    rgba(255,255,255,0.03) 100%);
+  backdrop-filter:blur(0px);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+/* 冰磚頂部光線 */
+.service-row::after {
+  content:'';
+  position:absolute; top:0; left:-60px; right:-60px; height:1px;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.35) 30%,
+    rgba(255,255,255,0.38) 50%,
+    rgba(255,255,255,0.35) 70%,
+    transparent 100%);
+  opacity:0;
+  transition:opacity 0.4s ease;
+  z-index:2;
+}
+.service-row:hover::before { transform:scaleX(1); }
+.service-row:hover::after { opacity:1; }
+.service-row:first-child { border-top:1px solid var(--border-dark); }
+/* hover 時整列加入冰磚內光框 */
+.service-row:hover {
+  box-shadow:inset 0 0 80px rgba(220,220,220,0.08),
+             inset 0 0 0 1px rgba(255,255,255,0.12);
+}
+
+.svc-num {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:48px; font-weight:300;
+  color:rgba(201,169,110,0.2);
+  position:relative; z-index:1;
+  transition:color 0.3s;
+}
+/* hover 時數字變冰藍色 */
+.service-row:hover .svc-num { color:rgba(255,255,255,0.84); }
+.svc-name-zh {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:22px; font-weight:400;
+  color:var(--cream); letter-spacing:3px;
+  position:relative; z-index:1;
+}
+.svc-name-en {
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px; font-weight:300; font-style:italic;
+  color:var(--light-mid); letter-spacing:3px;
+  margin-top:4px;
+}
+.svc-desc {
+  font-size:13px; font-weight:300;
+  color:var(--light-mid); line-height:2;
+  letter-spacing:0.5px;
+  position:relative; z-index:1;
+  transition:color 0.3s;
+}
+.service-row:hover .svc-desc { color:rgba(255,255,255,0.66); }
+.svc-icon { width:44px; text-align:right; position:relative; z-index:1; display:flex; align-items:center; justify-content:flex-end; transition:filter 0.3s; }
+.service-row:hover .svc-icon svg { opacity:0.85; filter:drop-shadow(0 0 8px rgba(255,255,255,0.34)); }
+
+/* ─── WORKS ─── */
+#works { background:var(--dark); padding:120px 0; }
+.works-header { padding:0 60px; margin-bottom:60px; }
+.works-grid {
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr;
+  grid-template-rows:auto auto;
+  gap:3px;
+}
+.work-item {
+  position:relative; overflow:hidden;
+  cursor:none; aspect-ratio:4/3;
+  background:var(--dark2);
+  /* 冰磚基底：每個作品格都有玻璃感邊框 */
+  box-shadow: inset 0 0 0 1px rgba(200,220,240,0.08);
+}
+.work-item.large { aspect-ratio:auto; grid-row:span 2; }
+.work-img-fill {
+  width:100%; height:100%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:56px;
+  transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+/* 冰磚色調 — 帶藍灰冷感的深色底 */
+.wi1 { background:linear-gradient(140deg, #18181C, #0C0C10); }
+.wi2 { background:linear-gradient(140deg, #161618, #0A0A0C); }
+.wi3 { background:linear-gradient(140deg, #141416, #080808); }
+.wi4 { background:linear-gradient(140deg, #181818, #0A0A0A); }
+/* 冰磚光暈：hover 前的靜態霜感 */
+.work-item::before {
+  content:'';
+  position:absolute; inset:0; z-index:1;
+  background:linear-gradient(135deg,
+    rgba(180,210,240,0.04) 0%,
+    transparent 40%,
+    rgba(150,190,230,0.03) 100%);
+  pointer-events:none;
+}
+/* 冰磚邊緣光：頂部和左側模擬冰面折射 */
+.work-item::after {
+  content:'';
+  /* 更強的頂部白色高光線 */
+  position:absolute; z-index:2; pointer-events:none;
+  top:0; left:0; right:0; height:1px;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.15) 30%,
+    rgba(220,240,255,0.25) 50%,
+    rgba(255,255,255,0.15) 70%,
+    transparent 100%);
+  transition:opacity 0.4s;
+}
+.work-item:hover::after { opacity:0; }
+.work-item:hover .work-img-fill { transform:scale(1.06); }
+
+/* hover 冰磚融化效果：overlay 帶霜藍透明感 */
+.work-overlay {
+  position:absolute; inset:0; z-index:3;
+  background:
+    linear-gradient(to top,
+      rgba(0,0,0,0.95) 0%,
+      rgba(0,0,0,0.63) 40%,
+      rgba(255,255,255,0.01) 70%,
+      transparent 100%);
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding:32px;
+  opacity:0;
+  transition:opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+  /* 冰磚 hover 內光 */
+  box-shadow:inset 0 0 60px rgba(100,160,220,0.06), inset 0 0 0 1px rgba(140,190,240,0.12);
+  backdrop-filter: blur(0px);
+}
+.work-item:hover .work-overlay {
+  opacity:1;
+  backdrop-filter:blur(2px) saturate(1.2);
+}
+/* 文字冰感 */
+.work-case-title {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:18px; font-weight:400;
+  color:#FFFFFF;
+  letter-spacing:3px; margin-bottom:6px;
+  text-shadow:0 0 18px rgba(255,255,255,0.29);
+}
+.work-case-title-en {
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px; font-weight:300; font-style:italic;
+  color:rgba(255,255,255,0.76); letter-spacing:2px; margin-bottom:8px;
+}
+.work-case-tag {
+  font-size:11px; color:rgba(160,195,240,0.6); letter-spacing:2px;
+}
+/* 冰磚標籤裝飾線 */
+.work-case-tag::before {
+  content:'— ';
+  color:rgba(140,185,240,0.4);
+}
+.work-caption {
+  position:absolute; bottom:20px; left:24px; right:24px;
+  opacity:1; transition:opacity 0.3s; z-index:3;
+}
+.work-item:hover .work-caption { opacity:0; }
+.work-caption-zh {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:13px;
+  color:rgba(200,220,255,0.25);
+  letter-spacing:2px;
+}
+/* 作品格角落冰晶裝飾 */
+.work-item .ice-corner {
+  position:absolute; top:0; right:0; z-index:4;
+  width:48px; height:48px; pointer-events:none;
+  opacity:0; transition:opacity 0.4s;
+}
+.work-item:hover .ice-corner { opacity:1; }
+.works-cta { text-align:center; margin-top:60px; padding:0 60px; }
+.works-note { font-size:12px; color:var(--light-mid); letter-spacing:1px; margin-top:20px; font-style:italic; }
+
+/* ─── PROCESS ─── */
+#process { background:var(--black); }
+.process-grid {
+  display:grid; grid-template-columns:repeat(5,1fr); gap:2px;
+  margin-top:16px;
+}
+.process-step {
+  background:var(--dark2);
+  padding:40px 28px;
+  position:relative; overflow:hidden;
+  transition:background 0.3s;
+  cursor:none;
+}
+.process-step:hover {
+  background:linear-gradient(160deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%);
+  box-shadow:inset 0 0 60px rgba(220,220,220,0.10), inset 0 0 0 1px rgba(255,255,255,0.15);
+}
+/* 冰磚頂部光線取代金色底線 */
+.process-step::after {
+  content:'';
+  position:absolute; top:0; left:0; right:0;
+  height:1px;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.70) 30%,
+    rgba(200,230,255,0.7) 50%,
+    rgba(255,255,255,0.70) 70%,
+    transparent 100%);
+  opacity:0;
+  transform:none;
+  transition:opacity 0.4s ease;
+}
+.process-step:hover::after { opacity:1; transform:none; }
+/* 冰磚底部光線 */
+.process-step::before {
+  content:'';
+  position:absolute; bottom:0; left:0; right:0;
+  height:2px;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(240,240,240,0.84) 40%,
+    rgba(255,255,255,1.04) 50%,
+    rgba(240,240,240,0.84) 60%,
+    transparent 100%);
+  transform:scaleX(0); transform-origin:center;
+  transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.process-step:hover::before { transform:scaleX(1); }
+.ps-num {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:11px; font-weight:500;
+  color:var(--gold); letter-spacing:4px;
+  margin-bottom:20px;
+  transition:color 0.3s;
+}
+.process-step:hover .ps-num { color:rgba(255,255,255,0.59); }
+/* SVG 圖示容器 */
+.ps-icon {
+  margin-bottom:16px; display:block;
+  width:48px; height:48px;
+  transition:filter 0.3s;
+}
+.ps-icon .site-svg-icon { display:block; }
+.process-step:hover .ps-icon { filter:drop-shadow(0 0 8px rgba(255,255,255,0.41)); }
+.process-step:hover .ps-icon .site-svg-icon line,
+.process-step:hover .ps-icon .site-svg-icon path,
+.process-step:hover .ps-icon .site-svg-icon polyline,
+.process-step:hover .ps-icon .site-svg-icon rect,
+.process-step:hover .ps-icon .site-svg-icon circle {
+  stroke: rgba(255,255,255,1.17);
+  transition: stroke 0.3s;
+}
+.ps-title-zh {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:16px; font-weight:500;
+  color:var(--cream); letter-spacing:2px; margin-bottom:4px;
+  transition:color 0.3s, text-shadow 0.3s;
+}
+.process-step:hover .ps-title-zh {
+  color:#FFFFFF;
+  text-shadow:0 0 18px rgba(255,255,255,0.36);
+}
+.ps-title-en {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:11px; font-weight:300; font-style:italic;
+  color:var(--light-mid); letter-spacing:2px; margin-bottom:16px;
+  transition:color 0.3s;
+}
+.process-step:hover .ps-title-en { color:rgba(255,255,255,0.59); }
+.ps-desc {
+  font-size:12px; color:var(--light-mid); line-height:2; letter-spacing:0.5px;
+  transition:color 0.3s;
+}
+.process-step:hover .ps-desc { color:rgba(255,255,255,0.62); }
+
+/* ─── TEAM ─── */
+#team { background:var(--dark); }
+.team-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; max-width:900px; }
+.team-card {
+  background:var(--dark2);
+  padding:48px 40px;
+  border:1px solid transparent;
+  transition:border-color 0.3s;
+  cursor:none;
+}
+.team-card:hover { border-color:var(--border-light); }
+.tc-name {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:24px; font-weight:400;
+  color:var(--cream); letter-spacing:4px; margin-bottom:4px;
+}
+.tc-name-en {
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px; font-weight:300; font-style:italic;
+  color:var(--gold); letter-spacing:3px; margin-bottom:6px;
+}
+.tc-role {
+  font-size:11px; color:var(--light-mid);
+  letter-spacing:3px; margin-bottom:24px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--border-dark);
+}
+.tc-desc { font-size:13px; font-weight:300; color:var(--light-mid); line-height:2.2; letter-spacing:0.5px; }
+
+/* ─── CONTACT ─── */
+#contact { background:var(--black); }
+.contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:100px; }
+.contact-info-list { display:flex; flex-direction:column; gap:0; }
+.contact-info-item {
+  display:flex; gap:24px; align-items:flex-start;
+  padding:28px 0;
+  border-bottom:1px solid var(--border-dark);
+}
+.contact-info-item:first-child { border-top:1px solid var(--border-dark); }
+.ci-icon { width:52px; flex-shrink:0; }
+.ci-icon-inner {
+  width:52px; height:52px;
+  border:1px solid rgba(255,255,255,0.22);
+  border-radius:4px;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(15,30,60,0.4);
+  backdrop-filter:blur(8px);
+  transition:border-color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+.contact-info-item:hover .ci-icon-inner {
+  border-color:rgba(255,255,255,0.56);
+  background:rgba(20,45,90,0.6);
+  box-shadow:0 0 24px rgba(255,255,255,0.12), inset 0 0 0 1px rgba(255,255,255,0.13);
+}
+.contact-info-item:hover .ci-icon-inner .site-svg-icon line,
+.contact-info-item:hover .ci-icon-inner .site-svg-icon path,
+.contact-info-item:hover .ci-icon-inner .site-svg-icon polyline,
+.contact-info-item:hover .ci-icon-inner .site-svg-icon rect,
+.contact-info-item:hover .ci-icon-inner .site-svg-icon circle {
+  stroke:rgba(255,255,255,1.17);
+  transition:stroke 0.3s;
+}
+.ci-icon-inner .site-svg-icon { display:block; }
+.ci-label {
+  font-size:11px; font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  color:var(--gold); letter-spacing:3px; text-transform:uppercase; margin-bottom:6px;
+  transition:color 0.3s;
+}
+.contact-info-item:hover .ci-label { color:rgba(255,255,255,0.68); }
+.ci-value { font-size:14px; font-weight:300; color:var(--cream); line-height:1.8; letter-spacing:1px; }
+.ci-value a { color:var(--cream); text-decoration:none; transition:color 0.2s; }
+.ci-value a:hover { color:rgba(255,255,255,1.17); }
+/* 聯絡項目 hover 冰磚底線 */
+.contact-info-item {
+  display:flex; gap:24px; align-items:flex-start;
+  padding:28px 0;
+  border-bottom:1px solid var(--border-dark);
+  transition:border-color 0.3s;
+  cursor:none;
+}
+.contact-info-item:hover { border-color:rgba(255,255,255,0.30); }
+.contact-info-item:first-child { border-top:1px solid var(--border-dark); }
+
+
+/* Form */
+.form-title {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:24px; font-weight:400;
+  color:var(--cream); letter-spacing:3px;
+  margin-bottom:8px;
+}
+.form-sub {
+  font-size:14px; font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  color:var(--light-mid); letter-spacing:1px; margin-bottom:36px;
+}
+.contact-form { display:flex; flex-direction:column; gap:0; }
+.f-row { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-bottom:2px; }
+.f-group { display:flex; flex-direction:column; }
+
+/* 冰磚感欄位 */
+.f-label {
+  font-size:12px; font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  color:rgba(255,255,255,0.59); letter-spacing:3px; text-transform:uppercase;
+  padding:16px 18px 0;
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(8px);
+  transition:color 0.2s;
+}
+.f-input, .f-textarea, .f-select {
+  background:rgba(255,255,255,0.04);
+  border:none;
+  border-bottom:1px solid rgba(80,130,200,0.15);
+  padding:12px 18px 18px;
+  font-size:16px; font-weight:300;
+  color:var(--cream);
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  outline:none; letter-spacing:1px;
+  transition:border-color 0.3s, background 0.3s, box-shadow 0.3s;
+  backdrop-filter:blur(8px);
+}
+.f-input:focus, .f-textarea:focus, .f-select:focus {
+  border-color:rgba(255,255,255,0.84);
+  background:rgba(255,255,255,0.07);
+  box-shadow:inset 0 -2px 0 rgba(255,255,255,0.60),
+             inset 0 0 30px rgba(200,200,200,0.07);
+}
+.f-input:focus + .f-label,
+.f-input::placeholder, .f-textarea::placeholder { color:rgba(120,150,200,0.4); }
+.f-textarea { resize:vertical; min-height:140px; }
+.f-select { appearance:none; cursor:none; }
+.f-select option { background:#0C1832; color:var(--cream); }
+.f-full { margin-bottom:2px; }
+
+/* 冰磚感整體表單外框 */
+.contact-form {
+  border:1px solid rgba(80,130,200,0.12);
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(16px) saturate(1.4);
+  box-shadow:0 0 60px rgba(180,180,180,0.10),
+             inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.form-submit-row {
+  display:flex;
+  justify-content:flex-end;
+  padding-top:20px;
+}
+.btn-submit-gold {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(255,255,255,0.30);
+  border-radius: 2px;
+  padding: 16px 44px;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: 'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  letter-spacing: 5px;
+  cursor: none;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  /* 無繼承黑框 */
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+/* 滑入時白色光從左展開 */
+.btn-submit-gold::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(255,255,255,0.07);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.btn-submit-gold:hover::before { transform: scaleX(1); }
+.btn-submit-gold:hover {
+  border-color: rgba(255,255,255,0.55);
+  color: #fff;
+  letter-spacing: 6px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.06);
+}
+.btn-submit-gold:active {
+  transform: scale(0.98);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background:var(--dark2);
+  border-top:1px solid var(--border-dark);
+  padding:80px 60px 48px;
+}
+.footer-top {
+  display:grid; grid-template-columns:1.8fr 1fr 1fr 1fr;
+  gap:60px; padding-bottom:60px;
+  border-bottom:1px solid var(--border-dark);
+  max-width:1400px; margin:0 auto;
+}
+.footer-logo-block {
+  display:flex; flex-direction:column; align-items:flex-start; gap:5px; margin-bottom:22px;
+}
+.footer-logo-zh {
+  font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+  font-size: 20px;
+  font-weight: 200;          /* 更細的字重，更精緻 */
+  color: var(--cream);
+  letter-spacing: 9px;       /* 頁尾字距更開，莊重感 */
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  opacity: 0.92;
+}
+.footer-logo-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--gold);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 1.3;
+  opacity: 0.7;
+}
+.footer-desc { font-size:14px; font-family:"Microsoft JhengHei","微軟正黑體","Noto Sans TC",sans-serif; font-weight:300; color:var(--light-mid); line-height:2.2; letter-spacing:0.5px; }
+.footer-col-title { font-size:12px; font-family:"Microsoft JhengHei","微軟正黑體","Noto Sans TC",sans-serif; color:var(--gold); letter-spacing:3px; text-transform:uppercase; margin-bottom:20px; font-weight:500; }
+.footer-links { list-style:none; display:flex; flex-direction:column; gap:14px; }
+.footer-links a { font-size:14px; font-family:"Microsoft JhengHei","微軟正黑體","Noto Sans TC",sans-serif; font-weight:300; color:var(--light-mid); text-decoration:none; letter-spacing:1px; transition:color 0.2s; }
+.footer-links a:hover { color:var(--cream); }
+.footer-bottom {
+  max-width:1400px; margin:0 auto;
+  padding-top:40px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.footer-copy { font-size:13px; font-family:"Microsoft JhengHei","微軟正黑體","Noto Sans TC",sans-serif; color:var(--mid); letter-spacing:1px; }
+.footer-login {
+  border:1px solid var(--border-dark);
+  padding:10px 24px;
+  font-size:11px; color:var(--light-mid);
+  letter-spacing:3px; text-decoration:none;
+  font-family:'Cormorant Garamond',serif;
+  text-transform:uppercase;
+  transition:all 0.3s;
+}
+.footer-login:hover { border-color:var(--gold); color:var(--gold); }
+
+/* ─── FADE ANIMATIONS ─── */
+.fade-up { opacity:0; transform:translateY(40px); transition:opacity 0.9s ease, transform 0.9s ease; }
+.fade-up.in { opacity:1; transform:translateY(0); }
+.fade-up.delay-1 { transition-delay:0.15s; }
+.fade-up.delay-2 { transition-delay:0.3s; }
+.fade-up.delay-3 { transition-delay:0.45s; }
+
+/* ─── TOAST ─── */
+.toast { position:fixed; bottom:40px; left:50%; transform:translateX(-50%) translateY(80px); background:var(--dark2); border:1px solid var(--border-light); color:var(--cream); padding:14px 32px; font-size:12px; letter-spacing:2px; z-index:9999; transition:transform 0.3s ease; pointer-events:none; }
+.toast.show { transform:translateX(-50%) translateY(0); }
+
+/* ─── LANG ─── */
+[data-en] { display:none; }
+body.en [data-zh] { display:none; }
+body.en [data-en] { display:revert; }
+
+/* ─── MOBILE ─── */
+.mob-menu-btn { display:none; background:none; border:none; color:var(--cream); font-size:20px; cursor:none; }
+/* ── TABLET (768px) ── */
+@media(max-width:1024px) and (min-width:768px){
+  body { cursor:auto; }
+  #cur,#cur-ring { display:none; }
+  nav { padding:0 32px; }
+  .nav-center { display:none; }
+  .mob-menu-btn { display:block; }
+  #hero { padding:0 48px 80px; min-height:100svh; grid-template-columns:1fr; }
+  .hero-right { display:none; }
+  .hero-h1-zh { font-size:54px; }
+  .hero-num { font-size:160px; opacity:.03; }
+  .section { padding:80px 48px; }
+  .about-inner { padding:0 48px; }
+  .about-grid { grid-template-columns:1fr; gap:48px; }
+  .about-visual { height:380px; width:100%; max-width:500px; margin:0 auto; }
+  .about-big-block { width:72%; height:78%; }
+  .about-small-block { width:42%; height:45%; }
+  .about-float-card { right:-8px; bottom:-20px; }
+  .about-stats { grid-template-columns:repeat(3,1fr); }
+  .services-list .service-row { grid-template-columns:60px 1fr 1fr; gap:24px; }
+  .svc-icon { display:none; }
+  .works-inner { padding:0 48px; }
+  .works-header,.works-cta { padding:0 48px; }
+  .works-grid { grid-template-columns:1fr 1fr; gap:3px; }
+  .work-item.large { grid-column:span 2; aspect-ratio:16/9; }
+  .process-grid { grid-template-columns:repeat(3,1fr); }
+  .team-inner { padding:0 48px; }
+  .team-grid { grid-template-columns:1fr 1fr; max-width:100%; }
+  #contact { padding:80px 48px; }
+  .contact-grid { grid-template-columns:1fr 1fr; gap:48px; }
+  footer { padding:60px 48px 40px; }
+  .footer-top { grid-template-columns:1fr 1fr; gap:32px; }
+  .footer-bottom { flex-direction:row; }
+  .f-row { grid-template-columns:1fr 1fr; }
+}
+
+/* ── MOBILE (<768px) ── */
+@media(max-width:767px){
+  body { cursor:auto; }
+  #cur,#cur-ring { display:none; }
+  nav { padding:0 20px; height:64px; }
+  .nav-center { display:none; }
+  .mob-menu-btn { display:block; }
+  .nav-system { padding:8px 14px; font-size:11px; letter-spacing:1px; }
+  #hero { padding:0 20px 72px; min-height:100svh; grid-template-columns:1fr; }
+  .hero-left { padding:96px 0 48px; }
+  .hero-right { display:none; }
+  .hero-num { display:none; }
+  .hero-h1-zh { font-size:clamp(34px,9vw,48px); letter-spacing:3px; }
+  .hero-eyebrow-text { font-size:10px; letter-spacing:3px; }
+  .hero-desc { font-size:14px; }
+  .hero-cta { flex-direction:column; gap:12px; }
+  .btn-gold,.btn-ghost { text-align:center; padding:16px 24px; }
+  .hero-scroll { display:none; }
+  .section { padding:64px 20px; }
+  .s-title-zh { font-size:clamp(24px,6vw,36px); }
+  .about-inner { padding:0 20px; grid-template-columns:1fr; gap:40px; }
+  .about-visual { height:280px; width:100%; max-width:100%; overflow:visible; }
+  .about-big-block { width:75%; height:78%; font-size:40px; }
+  .about-small-block { width:40%; height:44%; font-size:24px; }
+  .about-float-card { right:-4px; bottom:-16px; padding:12px 16px; min-width:100px; }
+  .about-float-num { font-size:32px; }
+  .about-badge { padding:12px 16px; }
+  .about-stats { grid-template-columns:repeat(3,1fr); gap:2px; }
+  .about-stat-num { font-size:22px; }
+  .about-stat { padding:16px 8px; }
+  .about-quote { padding:14px 16px; margin:24px 0; }
+  .about-text p { font-size:14px; }
+  .services-list .service-row { grid-template-columns:48px 1fr; gap:16px; padding:32px 0; }
+  .svc-name-zh { font-size:18px; }
+  .svc-desc,.svc-icon { display:none; }
+  #works { padding:64px 0; }
+  .works-header,.works-cta { padding:0 20px; }
+  .works-grid { grid-template-columns:1fr; gap:3px; }
+  .work-item.large { grid-column:span 1; aspect-ratio:4/3; min-height:unset; }
+  .work-item { aspect-ratio:4/3; }
+  .work-overlay { opacity:1; }
+  .process-grid { grid-template-columns:1fr 1fr; gap:2px; }
+  .ps-desc { display:none; }
+  .team-inner { padding:0 20px; }
+  .team-grid { grid-template-columns:1fr; max-width:100%; }
+  .team-card { padding:24px 20px; }
+  #contact { padding:64px 20px; }
+  .contact-grid { grid-template-columns:1fr; gap:40px; }
+  .f-row { grid-template-columns:1fr; }
+  .form-submit-row { padding-top:16px; }
+  .btn-submit-gold { width:100%; text-align:center; padding:16px 24px; letter-spacing:4px; }
+  footer { padding:48px 20px 32px; }
+  .footer-top { grid-template-columns:1fr; gap:32px; }
+  .footer-bottom { flex-direction:column; gap:16px; text-align:center; }
+}
+
+/* ── FLOATING LOGIN BTN ── */
+.float-login {
+  position: fixed;
+  bottom: 32px; right: 28px;
+  z-index: 500;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 12px;
+}
+.float-login-main {
+  background: var(--bark);
+  color: var(--cream);
+  border: none;
+  border-radius: 14px;
+  padding: 14px 22px;
+  font-size: 13px; font-weight: 500;
+  font-family: 'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 10px;
+  box-shadow: 0 8px 32px rgba(44,31,14,0.25);
+  transition: background 0.2s, transform 0.15s;
+  text-decoration: none;
+}
+.float-login-main:hover { background: var(--wood-dark); transform: translateY(-2px); }
+.float-login-sub {
+  display: flex; flex-direction: column; gap: 8px;
+  opacity: 0; transform: translateY(10px);
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+.float-login-sub.open { opacity: 1; transform: translateY(0); pointer-events: all; }
+.float-login-sub a {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-size: 12px; font-weight: 500;
+  color: var(--bark);
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  box-shadow: 0 4px 16px rgba(44,31,14,0.10);
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.float-login-sub a:hover { background: var(--cream-dark); }
+.float-lock-icon { font-size: 16px; }
+@media(max-width:767px){
+  .float-login { bottom: 20px; right: 16px; }
+  .float-login-main { padding: 12px 18px; font-size: 12px; }
+}
+
+
+/* ── ICE BRICK — 官網冰磚效果 ── */
+nav {
+  background: rgba(10,10,10,0.75) !important;
+  backdrop-filter: blur(20px) saturate(1.8) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.8) !important;
+  border-bottom: 1px solid rgba(201,169,110,0.15) !important;
+}
+nav.scrolled {
+  background: rgba(10,10,10,0.92) !important;
+  backdrop-filter: blur(24px) saturate(2) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(2) !important;
+}
+.float-login-main {
+  background: rgba(12,12,12,0.82) !important;
+  backdrop-filter: blur(16px) saturate(1.6) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.6) !important;
+  border: 1px solid rgba(201,169,110,0.3) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(201,169,110,0.1) !important;
+}
+.float-login-sub a {
+  background: rgba(240,248,255,0.88) !important;
+  backdrop-filter: blur(14px) saturate(1.5) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.5) !important;
+  border: 1px solid rgba(180,215,240,0.5) !important;
+  box-shadow: 0 4px 20px rgba(100,160,210,0.15) !important;
+  color: #1A3A52 !important;
+}
+.float-login-sub a:hover {
+  background: rgba(220,238,252,0.95) !important;
+}
+
+
+/* 服務項目 svg icon hover 變冰藍 */
+.service-row:hover .svc-icon svg line,
+.service-row:hover .svc-icon svg polyline,
+.service-row:hover .svc-icon svg rect,
+.service-row:hover .svc-icon svg circle {
+  stroke: rgba(255,255,255,0.98);
+  transition: stroke 0.3s;
+}
+
+
+/* ── 全站 SVG 線條圖示 — 統一初始色 ── */
+.site-svg-icon line,
+.site-svg-icon path,
+.site-svg-icon polyline,
+.site-svg-icon rect,
+.site-svg-icon circle {
+  stroke: rgba(255,255,255,0.5);
+  transition: stroke 0.3s;
+}
+
+
+/* ── 漢堡選單 ── */
+.mob-menu-btn {
+  display:none; background:none; border:none;
+  color:var(--cream); font-size:22px;
+  cursor:pointer; padding:8px; line-height:1;
+  transition:opacity 0.2s; z-index:201;
+  position:relative;
+}
+.mob-menu-btn:active { opacity:0.6; }
+
+/* 全螢幕選單覆蓋 */
+.mob-nav-overlay {
+  display:none;
+  position:fixed; inset:0; z-index:200;
+  background:rgba(6,12,24,0.97);
+  backdrop-filter:blur(20px) saturate(1.5);
+  flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:0;
+  opacity:0; transition:opacity 0.35s ease;
+}
+.mob-nav-overlay.open { display:flex; opacity:1; }
+.mob-nav-close {
+  position:absolute; top:24px; right:24px;
+  background:none; border:none;
+  color:rgba(255,255,255,0.5); font-size:28px;
+  cursor:pointer; padding:8px; line-height:1;
+}
+.mob-nav-close:active { opacity:0.6; }
+.mob-nav-links { display:flex; flex-direction:column; align-items:center; gap:0; width:100%; }
+.mob-nav-item {
+  width:100%; text-align:center;
+  border-bottom:1px solid rgba(255,255,255,0.09);
+  overflow:hidden;
+}
+.mob-nav-item:first-child { border-top:1px solid rgba(255,255,255,0.09); }
+.mob-nav-item a {
+  display:flex; flex-direction:column; align-items:center;
+  padding:28px 24px;
+  text-decoration:none;
+  transition:background 0.2s;
+  position:relative;
+}
+.mob-nav-item a::before {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:2px;
+  background:linear-gradient(180deg,rgba(255,255,255,0.00),rgba(255,255,255,0.57),rgba(255,255,255,0.00));
+  opacity:0; transition:opacity 0.3s;
+}
+.mob-nav-item a:active { background:rgba(20,45,90,0.5); }
+.mob-nav-item a:active::before { opacity:1; }
+.mob-nav-en {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:22px; font-weight:500;
+  color:rgba(255,255,255,0.90); letter-spacing:4px;
+  text-transform:uppercase; margin-bottom:6px;
+}
+.mob-nav-zh {
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:13px; font-weight:300;
+  color:rgba(140,180,240,0.5); letter-spacing:3px;
+}
+.mob-nav-system {
+  margin-top:40px; padding:0 40px; width:100%;
+  display:flex; flex-direction:column; gap:12px; align-items:center;
+}
+.mob-nav-system a {
+  display:block; width:100%; max-width:280px; text-align:center;
+  padding:16px 24px; text-decoration:none;
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  font-size:15px; font-weight:500; letter-spacing:3px;
+}
+.mob-nav-login {
+  background:rgba(15,35,80,0.8);
+  border:1px solid rgba(255,255,255,0.45);
+  color:rgba(180,215,255,0.9);
+  border-radius:4px;
+}
+.mob-lang-row {
+  margin-top:20px; display:flex; gap:16px;
+}
+.mob-lang-btn {
+  background:none; border:none;
+  font-size:14px; letter-spacing:2px;
+  color:rgba(140,180,240,0.5); cursor:pointer;
+  font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC',sans-serif;
+  padding:8px 16px; border-bottom:1px solid transparent;
+  transition:all 0.2s;
+}
+.mob-lang-btn.active { color:rgba(255,255,255,0.90); border-color:rgba(180,215,255,0.4); }
+
+
+/* ── 白色冰磚立體感強化 ── */
+/* 服務項目 hover */
+.service-row:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.15),
+    inset 0 -1px 0 rgba(255,255,255,0.04),
+    inset 1px 0 0 rgba(255,255,255,0.06),
+    inset -1px 0 0 rgba(255,255,255,0.06) !important;
+}
+/* 設計流程 hover */
+.process-step:hover {
+  background: rgba(255,255,255,0.04) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    inset 0 -1px 0 rgba(255,255,255,0.04),
+    0 4px 24px rgba(0,0,0,0.3) !important;
+}
+/* 作品集冰磚強化 */
+.work-item::before {
+  background: linear-gradient(135deg,
+    rgba(255,255,255,0.06) 0%,
+    transparent 40%,
+    rgba(255,255,255,0.03) 100%) !important;
+}
+.work-item::after {
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.20) 30%,
+    rgba(255,255,255,0.35) 50%,
+    rgba(255,255,255,0.20) 70%,
+    transparent 100%) !important;
+}
+.work-overlay {
+  background:
+    linear-gradient(to top,
+      rgba(0,0,0,0.92) 0%,
+      rgba(10,10,10,0.6) 40%,
+      rgba(20,20,20,0.15) 70%,
+      transparent 100%) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.15) !important;
+}
+/* 聯絡頁圖示框 */
+.ci-icon-inner {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+}
+.contact-info-item:hover .ci-icon-inner {
+  background: rgba(255,255,255,0.09) !important;
+  border-color: rgba(255,255,255,0.22) !important;
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.20),
+    inset 0 0 0 1px rgba(255,255,255,0.08) !important;
+}
+/* SVG 線條白色 */
+.site-svg-icon line,
+.site-svg-icon path,
+.site-svg-icon polyline,
+.site-svg-icon rect,
+.site-svg-icon circle {
+  stroke: rgba(255,255,255,0.45) !important;
+}
+.process-step:hover .ps-icon .site-svg-icon line,
+.process-step:hover .ps-icon .site-svg-icon path,
+.process-step:hover .ps-icon .site-svg-icon polyline,
+.process-step:hover .ps-icon .site-svg-icon rect,
+.process-step:hover .ps-icon .site-svg-icon circle,
+.contact-info-item:hover .ci-icon-inner .site-svg-icon line,
+.contact-info-item:hover .ci-icon-inner .site-svg-icon path,
+.contact-info-item:hover .ci-icon-inner .site-svg-icon polyline,
+.contact-info-item:hover .ci-icon-inner .site-svg-icon rect,
+.contact-info-item:hover .ci-icon-inner .site-svg-icon circle,
+.service-row:hover .svc-icon svg line,
+.service-row:hover .svc-icon svg polyline,
+.service-row:hover .svc-icon svg rect,
+.service-row:hover .svc-icon svg circle {
+  stroke: rgba(255,255,255,0.85) !important;
+}
+/* 表單冰磚 */
+.contact-form {
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  background: rgba(255,255,255,0.03) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    inset 0 0 0 1px rgba(255,255,255,0.04),
+    0 20px 60px rgba(0,0,0,0.3) !important;
+}
+.f-label { color: rgba(255,255,255,0.5) !important; background: rgba(255,255,255,0.03) !important; }
+.f-input, .f-textarea, .f-select {
+  background: rgba(255,255,255,0.03) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+.f-input:focus, .f-textarea:focus, .f-select:focus {
+  border-color: rgba(255,255,255,0.35) !important;
+  background: rgba(255,255,255,0.06) !important;
+  box-shadow:
+    inset 0 -2px 0 rgba(255,255,255,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    inset 0 0 20px rgba(255,255,255,0.03) !important;
+}
+/* btn-submit-gold 由主樣式控制 */
+
+
+/* ══════════════════════════════════════════
+   RESPONSIVE 強化補丁
+══════════════════════════════════════════ */
+
+/* 全站防溢出 */
+html, body { overflow-x:hidden; width:100%; }
+img, svg, video { max-width:100%; }
+*, *::before, *::after { box-sizing:border-box; }
+
+/* 大桌機 (>1400px) */
+@media(min-width:1400px){
+  .section-inner { padding:0 80px; }
+  .hero-left { padding:80px 60px 80px 120px; }
+}
+
+/* 小桌機 (1025px~1200px) */
+@media(max-width:1200px) and (min-width:1025px){
+  nav { padding:0 32px; }
+  .hero-left { padding:80px 40px 80px 60px; }
+  .section { padding:100px 60px; }
+  .about-inner { padding:0 60px; gap:60px; }
+  .works-inner { padding:0 60px; }
+  .works-header,.works-cta { padding:0 60px; }
+  .team-inner { padding:0 60px; }
+  .services-list .service-row { gap:40px; }
+  .contact-grid { gap:60px; }
+}
+
+/* 平板 (768px~1024px) 補強 */
+@media(max-width:1024px) and (min-width:768px){
+  .hero-h1-zh { font-size:clamp(36px,5.5vw,54px); }
+  .s-title-zh { font-size:clamp(24px,4vw,40px); }
+  .services-list .service-row { grid-template-columns:56px 1fr; gap:20px; }
+  .svc-desc,.svc-icon { display:none; }
+  .process-grid { grid-template-columns:repeat(3,1fr); gap:2px; }
+  .contact-grid { grid-template-columns:1fr; gap:48px; }
+  .footer-top { grid-template-columns:1fr 1fr; gap:32px; }
+  .about-text p { font-size:14px; line-height:2.2; }
+  .about-values { grid-template-columns:1fr 1fr; }
+}
+
+/* 手機 (<768px) 補強 */
+@media(max-width:767px){
+  /* Nav */
+  nav { height:60px; padding:0 16px; }
+  .nav-logo-cn { font-size:18px; letter-spacing:5px; font-weight:300; }
+  .nav-logo-en { font-size:9px; letter-spacing:5px; }
+  .nav-system { display:none; }
+
+  /* Hero */
+  .hero-eyebrow { margin-bottom:20px; }
+  .hero-h1-zh { font-size:clamp(30px,8vw,44px); letter-spacing:3px; }
+  .hero-h1-en { font-size:clamp(14px,4vw,20px); }
+  .hero-desc { font-size:13px; line-height:2; }
+
+  /* About */
+  .about-inner { padding:0 16px; }
+  .about-values { grid-template-columns:1fr; gap:10px; }
+  .about-value-item { padding:14px; }
+  .about-quote-text { font-size:14px; }
+
+  /* Services */
+  #services .section-inner { padding:0; }
+  #services { padding:64px 20px; }
+  .services-list .service-row { grid-template-columns:44px 1fr; gap:14px; padding:28px 0; }
+  .svc-num { font-size:32px; }
+  .svc-name-zh { font-size:17px; letter-spacing:2px; }
+  .svc-name-en { font-size:11px; }
+
+  /* Works */
+  .works-grid { grid-template-columns:1fr; }
+  .work-item, .work-item.large { aspect-ratio:3/2; grid-column:span 1; min-height:unset; }
+  .work-case-title { font-size:16px; }
+
+  /* Process */
+  .process-grid { grid-template-columns:1fr 1fr; gap:2px; }
+  .ps-num { font-size:10px; letter-spacing:2px; margin-bottom:14px; }
+  .ps-title-zh { font-size:13px; }
+  .ps-title-en { font-size:10px; margin-bottom:8px; }
+  .process-step { padding:24px 16px; }
+
+  /* Team */
+  .team-card { padding:24px 18px; gap:16px; }
+  .tc-name { font-size:20px; }
+  .tc-desc { font-size:12px; }
+
+  /* Contact */
+  .ci-icon-inner { width:44px; height:44px; }
+  .ci-icon { width:44px; }
+  .ci-label { font-size:10px; }
+  .ci-value { font-size:13px; }
+  .f-label { font-size:11px; padding:12px 14px 0; }
+  .f-input,.f-textarea,.f-select { font-size:15px; padding:10px 14px 14px; }
+  .form-title { font-size:20px; }
+  .contact-info-list { gap:0; }
+
+  /* Footer */
+  .footer-top { grid-template-columns:1fr; gap:28px; padding-bottom:40px; }
+  .footer-logo-zh { font-size:17px; letter-spacing:7px; }
+  .footer-logo-en { font-size:10px; letter-spacing:4px; }
+  .footer-col-title { font-size:11px; margin-bottom:14px; }
+  .footer-links a { font-size:13px; }
+  .footer-copy { font-size:11px; }
+
+  /* Float login */
+  .float-login { bottom:16px; right:12px; }
+  .float-login-main { padding:10px 16px; font-size:12px; }
+}
+
+/* 極小手機 (<375px) */
+@media(max-width:375px){
+  .hero-h1-zh { font-size:28px; }
+  .about-visual { height:240px; }
+  .process-grid { grid-template-columns:1fr; }
+  .process-step { padding:20px 16px; }
+  .ps-desc { display:block; font-size:11px; }
+  .team-card { flex-direction:column; }
+  .about-stats { grid-template-columns:repeat(3,1fr); }
+}
+
+
+/* ── 手機/平板端語言切換調整 ── */
+@media(max-width:1024px){
+  .lang-btn {
+    font-size:11px;
+    padding:5px 7px;
+    letter-spacing:1px;
+  }
+  .lang-row { gap:0; }
+  .nav-right { gap:10px; }
+}
+@media(max-width:767px){
+  .lang-btn {
+    font-size:11px;
+    padding:5px 7px;
+  }
+  /* nav-right 縮緊間距，確保 logo + 語言 + 漢堡都顯示得下 */
+  nav { gap:8px; }
+  .nav-right { gap:8px; }
+}
+
+
+/* ── Logo & 標題字體渲染強化 ── */
+.s-title-zh, .hero-h1-zh, .ps-title-zh,
+.tc-name, .svc-name-zh, .work-case-title,
+.section-title, .form-title {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+/* about、team 標題用宋體細體 */
+.about-quote-text {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<div class="toast" id="toast"></div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-cn">富璟設計</span>
+    <span class="nav-logo-en">FUJING DESIGN</span>
+  </a>
+  <ul class="nav-center">
+    <li><a href="#about"><span class="en">ABOUT</span><span class="zh">關於我們</span></a></li>
+    <li><a href="#services"><span class="en">SERVICES</span><span class="zh">服務項目</span></a></li>
+    <li><a href="#works"><span class="en">WORKS</span><span class="zh">作品集</span></a></li>
+    <li><a href="#process"><span class="en">PROCESS</span><span class="zh">設計流程</span></a></li>
+    <li><a href="#contact"><span class="en">CONTACT</span><span class="zh">聯絡我們</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-row">
+      <button class="lang-btn active" onclick="setLang('zh')">中文</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <a href="fujing-platform.html" class="nav-system" data-zh>進入系統</a>
+    <a href="fujing-platform.html" class="nav-system" data-en>LOGIN</a>
+    <button class="mob-menu-btn" id="mob-menu-btn" onclick="openMobMenu()" aria-label="開啟選單">☰</button>
+  </div>
+</nav>
+<!-- ── 漢堡選單 Overlay ── -->
+<div class="mob-nav-overlay" id="mob-nav-overlay">
+  <button class="mob-nav-close" onclick="closeMobMenu()" aria-label="關閉選單">✕</button>
+  <div class="mob-nav-links">
+    <div class="mob-nav-item"><a href="#about" onclick="closeMobMenu()">
+      <div class="mob-nav-en">ABOUT</div><div class="mob-nav-zh">關於我們</div></a></div>
+    <div class="mob-nav-item"><a href="#services" onclick="closeMobMenu()">
+      <div class="mob-nav-en">SERVICES</div><div class="mob-nav-zh">服務項目</div></a></div>
+    <div class="mob-nav-item"><a href="#works" onclick="closeMobMenu()">
+      <div class="mob-nav-en">WORKS</div><div class="mob-nav-zh">作品集</div></a></div>
+    <div class="mob-nav-item"><a href="#process" onclick="closeMobMenu()">
+      <div class="mob-nav-en">PROCESS</div><div class="mob-nav-zh">設計流程</div></a></div>
+    <div class="mob-nav-item"><a href="#contact" onclick="closeMobMenu()">
+      <div class="mob-nav-en">CONTACT</div><div class="mob-nav-zh">聯絡我們</div></a></div>
+  </div>
+  <div class="mob-nav-system">
+    <a href="fujing-platform.html" class="mob-nav-login" data-zh>🔐 進入系統</a>
+    <a href="fujing-platform.html" class="mob-nav-login" data-en>🔐 Login</a>
+  </div>
+  <div class="mob-lang-row">
+    <button class="mob-lang-btn active" id="mob-lang-zh" onclick="setLang('zh');updateMobLang()">中文</button>
+    <button class="mob-lang-btn" id="mob-lang-en" onclick="setLang('en');updateMobLang()">EN</button>
+  </div>
+</div>
+
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-lines"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="hero-num">空間</div>
+  <div class="hero-content fade-up">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <div class="hero-eyebrow-text">Interior Design · Space Planning</div>
+    </div>
+    <h1 class="hero-h1-zh" data-zh>以空間承載<br>生活的溫度</h1>
+    <div class="hero-h1-en" data-en>Crafting Warmth<br>Through Thoughtful Space</div>
+    <div class="hero-h1-en" data-zh>Crafting Warmth Through Space</div>
+    <p class="hero-desc" data-zh>富璟設計，以細膩工藝與溫暖質感，為每位業主打造獨一無二的生活美學。從概念發想到竣工驗收，我們陪伴您走過每一個細節。</p>
+    <p class="hero-desc" data-en>FUJING DESIGN crafts unique living aesthetics for each client through meticulous craftsmanship. From concept to completion, we accompany you through every detail.</p>
+    <div class="hero-cta">
+      <a href="#works" class="btn-gold" data-zh>瀏覽作品</a>
+      <a href="#works" class="btn-gold" data-en>VIEW WORKS</a>
+      <a href="#contact" class="btn-ghost" data-zh>預約諮詢</a>
+      <a href="#contact" class="btn-ghost" data-en>BOOK CONSULTATION</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-text">SCROLL</div>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="marquee-dot"></span>INTERIOR DESIGN</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>富璟設計</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>SPACE PLANNING</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>住宅設計</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>COMMERCIAL SPACE</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>商業空間</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>FUJING DESIGN</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>精工細作</div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item"><span class="marquee-dot"></span>INTERIOR DESIGN</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>富璟設計</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>SPACE PLANNING</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>住宅設計</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>COMMERCIAL SPACE</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>商業空間</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>FUJING DESIGN</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>精工細作</div>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section class="section" id="about">
+<div class="section-inner">
+  <div class="about-grid">
+    <div class="about-visual fade-up">
+      <div class="about-main-img">🏠</div>
+      <div class="about-float-card">
+        <div class="about-float-num">10<span style="font-size:24px">+</span></div>
+        <div class="about-float-label" data-zh>年設計經驗</div>
+        <div class="about-float-label" data-en>YEARS EXP.</div>
+      </div>
+    </div>
+    <div class="fade-up delay-1">
+      <div class="s-tag"><div class="s-tag-line"></div><div class="s-tag-text">About Us</div></div>
+      <div class="s-title-zh" data-zh>用設計說話<br>用溫度打動人心</div>
+      <div class="s-title-zh" data-en>Design That Speaks<br>Warmth That Moves</div>
+      <div class="s-title-en">About FUJING Design</div>
+      <p class="about-text-body" data-zh>富璟設計有限公司，由設計總監王飛馭創立，專注於住宅、商業及辦公空間的整合設計服務。我們相信，好的空間設計不只是視覺美感，更是生活方式的延伸與詮釋。</p>
+      <p class="about-text-body" data-en>Founded by Design Director Wang Fei-Yu, FUJING Design specializes in integrated design for residential, commercial, and office spaces. We believe good design extends beyond aesthetics — it embodies a way of living.</p>
+      <div class="about-quote">
+        <div class="about-quote-text" data-zh>空間有限，但想像力無邊。設計不應受制於外在條件，而是放下成見，不斷創造嶄新的感知。</div>
+        <div class="about-quote-text" data-en>Space is limited, but imagination is limitless. Design should not be restricted by conditions, but rather create brand new perceptions.</div>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat"><span class="about-stat-num">10+</span><span class="about-stat-label" data-zh>年設計經驗</span><span class="about-stat-label" data-en>Years</span></div>
+        <div class="about-stat"><span class="about-stat-num">50+</span><span class="about-stat-label" data-zh>完工案件</span><span class="about-stat-label" data-en>Projects</span></div>
+        <div class="about-stat"><span class="about-stat-num">20+</span><span class="about-stat-label" data-zh>合作廠商</span><span class="about-stat-label" data-en>Partners</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section class="section" id="services">
+<div class="section-inner">
+  <div class="s-tag fade-up"><div class="s-tag-line"></div><div class="s-tag-text">Services</div></div>
+  <div class="s-title-zh fade-up" data-zh>我們能為您提供</div>
+  <div class="s-title-zh fade-up" data-en>What We Offer</div>
+  <div class="s-title-en fade-up">Our Services</div>
+  <div class="services-list fade-up">
+    <div class="service-row">
+      <div class="svc-num">01</div>
+      <div>
+        <div class="svc-name-zh" data-zh>住宅空間設計</div>
+        <div class="svc-name-zh" data-en>Residential Design</div>
+        <div class="svc-name-en">Residential Interior</div>
+      </div>
+      <div class="svc-desc" data-zh>以精準的空間尺度分析與材質選配為核心，無論新成屋規劃或老屋改造，我們系統性地整合動線佈局、採光條件與生活場景，在嚴格的施工品質管理下，交付兼具人體工學與美學張力的居住環境。</div>
+      <div class="svc-desc" data-en>Anchored in precise spatial analysis and material curation, we systematically integrate circulation planning, daylighting, and lifestyle scenarios — delivering residences that achieve both ergonomic excellence and aesthetic distinction under rigorous construction oversight.</div>
+      <div class="svc-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.55">
+  <polyline points="4,20 20,6 36,20" stroke="#C8C0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <polyline points="8,17 8,35 32,35 32,17" stroke="#C8C0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="15" y="24" width="10" height="11" stroke="#C8C0B0" stroke-width="1.5" fill="none"/>
+  <rect x="10" y="20" width="7" height="7" stroke="#C8C0B0" stroke-width="1.2" fill="none"/>
+  <rect x="23" y="20" width="7" height="7" stroke="#C8C0B0" stroke-width="1.2" fill="none"/>
+</svg></div>
+    </div>
+    <div class="service-row">
+      <div class="svc-num">02</div>
+      <div>
+        <div class="svc-name-zh" data-zh>商業空間設計</div>
+        <div class="svc-name-zh" data-en>Commercial Design</div>
+        <div class="svc-name-en">Commercial Space</div>
+      </div>
+      <div class="svc-desc" data-zh>深度解析品牌 DNA 與目標客群行為模式，將視覺識別系統轉譯為空間語彙，從材質肌理、光環境設計到動線規劃，構築具備強烈品牌辨識度與轉化效益的商業場域體驗。</div>
+      <div class="svc-desc" data-en>By decoding brand DNA and analyzing target audience behavior, we translate visual identity into spatial vocabulary — crafting commercial environments with compelling brand recognition and measurable conversion impact through materiality, lighting design, and circulation strategy.</div>
+      <div class="svc-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.55">
+  <rect x="6" y="10" width="18" height="26" stroke="#C8C0B0" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  <rect x="24" y="18" width="12" height="18" stroke="#C8C0B0" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  <line x1="6" y1="36" x2="36" y2="36" stroke="#C8C0B0" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="9" y="14" width="4" height="4" stroke="#C8C0B0" stroke-width="1" fill="none"/>
+  <rect x="16" y="14" width="4" height="4" stroke="#C8C0B0" stroke-width="1" fill="none"/>
+  <rect x="9" y="21" width="4" height="4" stroke="#C8C0B0" stroke-width="1" fill="none"/>
+  <rect x="16" y="21" width="4" height="4" stroke="#C8C0B0" stroke-width="1" fill="none"/>
+  <rect x="9" y="28" width="4" height="4" stroke="#C8C0B0" stroke-width="1" fill="none"/>
+  <rect x="16" y="28" width="4" height="4" stroke="#C8C0B0" stroke-width="1" fill="none"/>
+  <rect x="27" y="22" width="3" height="3" stroke="#C8C0B0" stroke-width="1" fill="none"/>
+  <rect x="27" y="28" width="3" height="3" stroke="#C8C0B0" stroke-width="1" fill="none"/>
+</svg></div>
+    </div>
+    <div class="service-row">
+      <div class="svc-num">03</div>
+      <div>
+        <div class="svc-name-zh" data-zh>空間規劃顧問</div>
+        <div class="svc-name-zh" data-en>Space Planning</div>
+        <div class="svc-name-en">Consulting</div>
+      </div>
+      <div class="svc-desc" data-zh>透過系統性的空間效能診斷，評估現有格局、結構條件與使用痛點，提供具備可行性的改善策略與優先序建議，協助業主在預算框架內實現最大化的空間效益與使用品質提升。</div>
+      <div class="svc-desc" data-en>Through systematic spatial performance diagnostics, we assess existing layouts, structural conditions, and usage friction points — delivering feasibility-validated improvement strategies and prioritized recommendations that maximize spatial efficiency within defined budget parameters.</div>
+      <div class="svc-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.55">
+  <circle cx="20" cy="14" r="5" stroke="#C8C0B0" stroke-width="1.5" fill="none"/>
+  <line x1="17" y1="18" x2="10" y2="34" stroke="#C8C0B0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="23" y1="18" x2="30" y2="34" stroke="#C8C0B0" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="13" y1="27" x2="27" y2="27" stroke="#C8C0B0" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="6" y1="8" x2="34" y2="8" stroke="#C8C0B0" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+</svg></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ WORKS ══ -->
+<section id="works">
+<div class="works-header fade-up">
+  <div class="s-tag"><div class="s-tag-line"></div><div class="s-tag-text">Portfolio</div></div>
+  <div class="s-title-zh" data-zh style="color:#E8EFF8;">每個空間都是一個故事</div>
+  <div class="s-title-zh" data-en style="color:#E8EFF8;">Every Space Tells a Story</div>
+  <div class="s-title-en">Selected Works</div>
+</div>
+<div class="works-grid fade-up">
+  <div class="work-item large wi1">
+    <div class="work-img-fill">🛋️</div>
+    <svg class="ice-corner" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <line x1="48" y1="0" x2="28" y2="0" stroke="rgba(180,215,255,0.25)" stroke-width="0.8"/>
+  <line x1="48" y1="0" x2="48" y2="20" stroke="rgba(180,215,255,0.25)" stroke-width="0.8"/>
+  <line x1="48" y1="0" x2="36" y2="12" stroke="rgba(180,215,255,0.15)" stroke-width="0.6"/>
+</svg>
+    <div class="work-caption"><div class="work-caption-zh">陳宅 — 溫潤木質</div></div>
+    <div class="work-overlay">
+      <div class="work-case-title" data-zh>陳宅 — 溫潤木質住宅</div>
+      <div class="work-case-title" data-en>Chen Residence</div>
+      <div class="work-case-title-en">Warm Wood Home</div>
+      <div class="work-case-tag" data-zh>住宅設計 · 台北市 · 2024</div>
+      <div class="work-case-tag" data-en>Residential · Taipei · 2024</div>
+    </div>
+  </div>
+  <div class="work-item wi2">
+    <div class="work-img-fill">☕</div>
+    <svg class="ice-corner" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <line x1="48" y1="0" x2="28" y2="0" stroke="rgba(180,215,255,0.25)" stroke-width="0.8"/>
+  <line x1="48" y1="0" x2="48" y2="20" stroke="rgba(180,215,255,0.25)" stroke-width="0.8"/>
+  <line x1="48" y1="0" x2="36" y2="12" stroke="rgba(180,215,255,0.15)" stroke-width="0.6"/>
+</svg>
+    <div class="work-caption"><div class="work-caption-zh">林氏辦公室</div></div>
+    <div class="work-overlay">
+      <div class="work-case-title" data-zh>林氏辦公室</div>
+      <div class="work-case-title" data-en>Lin Office Space</div>
+      <div class="work-case-title-en">Modern Workspace</div>
+      <div class="work-case-tag" data-zh>商業設計 · 新北市 · 2024</div>
+      <div class="work-case-tag" data-en>Commercial · New Taipei · 2024</div>
+    </div>
+  </div>
+  <div class="work-item wi3">
+    <div class="work-img-fill">🍽️</div>
+    <svg class="ice-corner" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <line x1="48" y1="0" x2="28" y2="0" stroke="rgba(180,215,255,0.25)" stroke-width="0.8"/>
+  <line x1="48" y1="0" x2="48" y2="20" stroke="rgba(180,215,255,0.25)" stroke-width="0.8"/>
+  <line x1="48" y1="0" x2="36" y2="12" stroke="rgba(180,215,255,0.15)" stroke-width="0.6"/>
+</svg>
+    <div class="work-caption"><div class="work-caption-zh">王小姐餐廳</div></div>
+    <div class="work-overlay">
+      <div class="work-case-title" data-zh>王小姐餐廳</div>
+      <div class="work-case-title" data-en>Wang Restaurant</div>
+      <div class="work-case-title-en">Dining Experience</div>
+      <div class="work-case-tag" data-zh>餐飲空間 · 台中市 · 2025</div>
+      <div class="work-case-tag" data-en>Restaurant · Taichung · 2025</div>
+    </div>
+  </div>
+</div>
+<div class="works-cta fade-up">
+  <p class="works-note" data-zh>＊ 精選作品照片更新中，完工照片即將呈現</p>
+  <p class="works-note" data-en>＊ Portfolio photos coming soon</p>
+</div>
+</section>
+
+<!-- ══ PROCESS ══ -->
+<section class="section" id="process">
+<div class="section-inner">
+  <div class="s-tag fade-up"><div class="s-tag-line"></div><div class="s-tag-text">Process</div></div>
+  <div class="s-title-zh fade-up" data-zh>從概念到完工，全程陪伴</div>
+  <div class="s-title-zh fade-up" data-en>From Concept to Completion</div>
+  <div class="s-title-en fade-up">Design Process</div>
+  <div class="process-grid fade-up">
+    <div class="process-step">
+      <div class="ps-num">STEP 01</div>
+      <span class="ps-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-svg-icon"><path d="M8 10 Q8 6 12 6 H36 Q40 6 40 10 V26 Q40 30 36 30 H26 L18 38 V30 H12 Q8 30 8 26 Z" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="16" x2="28" y2="16" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="16" y1="22" x2="24" y2="22" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="ps-title-zh" data-zh>初步諮詢</div>
+      <div class="ps-title-zh" data-en>Consultation</div>
+      <div class="ps-title-en">Initial Meeting</div>
+      <div class="ps-desc" data-zh>瞭解您的需求、預算範圍與空間風格偏好，由設計師親自傾聽您的夢想。</div>
+      <div class="ps-desc" data-en>Understanding needs, budget & style preferences through a personal meeting with our designer.</div>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">STEP 02</div>
+      <span class="ps-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-svg-icon"><line x1="8" y1="40" x2="20" y2="10" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="8" x2="22" y2="12" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="8" x2="18" y2="40" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="36" x2="10" y2="44" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="26" y1="10" x2="42" y2="10" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="16" x2="40" y2="16" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="26" y1="22" x2="38" y2="22" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="28" x2="36" y2="28" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="ps-title-zh" data-zh>概念設計</div>
+      <div class="ps-title-zh" data-en>Concept Design</div>
+      <div class="ps-title-en">Design Proposal</div>
+      <div class="ps-desc" data-zh>平面規劃、風格意向板、3D示意圖，讓您提前感受未來的空間樣貌。</div>
+      <div class="ps-desc" data-en>Floor plan, mood board & 3D visuals, letting you experience the future space in advance.</div>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">STEP 03</div>
+      <span class="ps-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-svg-icon"><path d="M10 6 H32 L38 12 V42 H10 Z" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="32,6 32,12 38,12" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="18,24 22,28 30,20" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="16" y1="16" x2="32" y2="16" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="16" y1="34" x2="26" y2="34" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="ps-title-zh" data-zh>確認定案</div>
+      <div class="ps-title-zh" data-en>Approval</div>
+      <div class="ps-title-en">Final Confirmation</div>
+      <div class="ps-desc" data-zh>設計修改確認、詳細報價定稿、工程合約正式簽署，確保雙方共識。</div>
+      <div class="ps-desc" data-en>Design revisions, detailed quote finalization & formal contract signing to ensure mutual consensus.</div>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">STEP 04</div>
+      <span class="ps-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-svg-icon"><rect x="8" y="8" width="18" height="10" rx="2" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="17" y1="18" x2="10" y2="38" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="19" y1="18" x2="26" y2="38" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="38" x2="26" y2="38" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="30" y1="28" x2="44" y2="28" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="37" cy="28" r="4" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="37" cy="28" r="1.5" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" fill="rgba(200,220,255,0.55)"/></svg></span>
+      <div class="ps-title-zh" data-zh>施工監管</div>
+      <div class="ps-title-zh" data-en>Construction</div>
+      <div class="ps-title-en">Site Management</div>
+      <div class="ps-desc" data-zh>工班協調排程、定期進度追蹤、現場品質把關，全程透明可查詢。</div>
+      <div class="ps-desc" data-en>Contractor coordination, regular progress tracking & quality control — transparent throughout.</div>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">STEP 05</div>
+      <span class="ps-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-svg-icon"><polyline points="6,24 24,8 42,24" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="10,20 10,40 22,40 22,30 26,30 26,40 38,40 38,20" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="34" cy="14" r="4" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="38" y1="14" x2="44" y2="14" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="44" y1="14" x2="44" y2="18" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="ps-title-zh" data-zh>竣工交屋</div>
+      <div class="ps-title-zh" data-en>Completion</div>
+      <div class="ps-title-en">Handover</div>
+      <div class="ps-desc" data-zh>現場竣工驗收、詳細交屋說明、完善售後服務，確保每個細節完美。</div>
+      <div class="ps-desc" data-en>Final inspection, detailed handover walkthrough & aftercare service for your peace of mind.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ TEAM ══ -->
+<section class="section" id="team">
+<div class="section-inner">
+  <div class="s-tag fade-up"><div class="s-tag-line"></div><div class="s-tag-text">Team</div></div>
+  <div class="s-title-zh fade-up" data-zh>與您攜手的設計夥伴</div>
+  <div class="s-title-zh fade-up" data-en>Your Design Partners</div>
+  <div class="s-title-en fade-up">Meet the Team</div>
+  <div class="team-grid fade-up">
+    <div class="team-card">
+      <div class="tc-name">王飛馭</div>
+      <div class="tc-name-en">Wang Fei-Yu</div>
+      <div class="tc-role" data-zh>設計總監 · 負責人　DESIGN DIRECTOR</div>
+      <div class="tc-role" data-en>Design Director · Founder</div>
+      <div class="tc-desc" data-zh>擁有豐富的住宅與商業空間設計經驗，擅長以溫潤材質打造有故事的生活場域，帶領團隊從每一個細節實踐設計美學，讓空間成為業主生活的最佳詮釋。</div>
+      <div class="tc-desc" data-en>Extensive experience in residential and commercial design, specializing in crafting narrative spaces through warm materials. Leads the team in achieving design excellence through every detail.</div>
+    </div>
+    <div class="team-card">
+      <div class="tc-name">黃鈺軒</div>
+      <div class="tc-name-en">Huang Yu-Hsuan</div>
+      <div class="tc-role" data-zh>專案設計師　PROJECT DESIGNER</div>
+      <div class="tc-role" data-en>Project Designer</div>
+      <div class="tc-desc" data-zh>專注於空間機能與美學的整合，對細節有高度敏感度，擅長將業主需求轉化為令人驚喜的設計方案，以嚴謹的態度把關每個施工細節。</div>
+      <div class="tc-desc" data-en>Focused on integrating function and aesthetics with keen sensitivity to detail. Excels at translating client needs into delightful design solutions with rigorous attention to construction quality.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="section" id="contact">
+<div class="section-inner">
+  <div class="s-tag fade-up"><div class="s-tag-line"></div><div class="s-tag-text">Contact</div></div>
+  <div class="s-title-zh fade-up" data-zh>讓我們開始一段對話</div>
+  <div class="s-title-zh fade-up" data-en>Let's Start a Conversation</div>
+  <div class="s-title-en fade-up">Get in Touch</div>
+  <div class="contact-grid fade-up">
+    <div>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="ci-icon"><div class="ci-icon-inner"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-svg-icon"><path d="M10 8 C10 8 14 6 16 10 L18 16 C18 16 19 18 17 20 L15 22 C15 22 20 28 24 30 L26 28 C26 28 28 26 30 27 L36 30 C40 32 38 36 38 36 C36 42 10 36 10 8 Z" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div></div>
+          <div><div class="ci-label">Phone</div><div class="ci-value"><a href="tel:02-XXXX-XXXX">02-XXXX-XXXX</a></div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon"><div class="ci-icon-inner"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-svg-icon"><rect x="6" y="12" width="36" height="24" rx="2" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="6,14 24,26 42,14" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div><div class="ci-label">Email</div><div class="ci-value"><a href="mailto:info@fujingdesign.com.tw">info@fujingdesign.com.tw</a></div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon"><div class="ci-icon-inner"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-svg-icon"><rect x="6" y="6" width="36" height="36" rx="8" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 14 C16 14 10 19 10 25 C10 30.5 15 35.2 22 35.8 L22 39 C22 39 30 35 33 32 C36 29.5 38 27.5 38 25 C38 19 32 14 24 14 Z" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="18" y1="23" x2="18" y2="27" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="23" x2="21" y2="27" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="24" y1="23" x2="27" y2="27" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="24" y1="27" x2="30" y2="27" stroke="rgba(200,220,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div><div class="ci-label">LINE</div><div class="ci-value"><a href="#">@fujingdesign</a></div></div>
+        </div>
+
+      </div>
+
+    </div>
+    <div>
+      <div class="form-title" data-zh style="color:#E8F2FF;">預約諮詢</div>
+      <div class="form-title" data-en style="color:#E8F2FF;">Book a Consultation</div>
+      <div class="form-sub" data-zh style="color:rgba(160,200,255,0.6);">填寫以下表單，我們將於 24 小時內與您聯繫</div>
+      <div class="form-sub" data-en style="color:rgba(160,200,255,0.6);">Fill in the form below and we'll contact you within 24 hours</div>
+      <div class="contact-form">
+        <div class="f-row">
+          <div class="f-group">
+            <div class="f-label" data-zh>姓名 *</div>
+            <div class="f-label" data-en>Name *</div>
+            <input class="f-input" type="text" placeholder="姓名 Name">
+          </div>
+          <div class="f-group">
+            <div class="f-label" data-zh>電話 *</div>
+            <div class="f-label" data-en>Phone *</div>
+            <input class="f-input" type="tel" placeholder="09XX-XXX-XXX">
+          </div>
+        </div>
+        <div class="f-group f-full">
+          <div class="f-label">Email</div>
+          <input class="f-input" type="email" placeholder="example@email.com">
+        </div>
+        <div class="f-group f-full" style="margin-bottom:2px">
+          <div class="f-label" data-zh>諮詢項目</div>
+          <div class="f-label" data-en>Service Type</div>
+          <select class="f-select" id="service-select">
+            <option value="" disabled selected data-zh>　請選擇服務類型</option>
+            <option value="" disabled selected data-en>　Select Service Type</option>
+            <option value="residential" data-zh>住宅空間　Residential Space</option>
+            <option value="commercial" data-zh>商業空間　Commercial Space</option>
+            <option value="restaurant" data-zh>餐廳空間　Restaurant Space</option>
+            <option value="residential" data-en>Residential Space　住宅空間</option>
+            <option value="commercial" data-en>Commercial Space　商業空間</option>
+            <option value="restaurant" data-en>Restaurant Space　餐廳空間</option>
+          </select>
+        </div>
+        <div class="f-group f-full" style="margin-bottom:0">
+          <div class="f-label" data-zh>案件說明</div>
+          <div class="f-label" data-en>Project Description</div>
+          <textarea class="f-textarea" data-zh placeholder="請描述您的空間坪數、預算範圍與希望呈現的風格…&#10;Space size · Budget range · Preferred style"></textarea>
+          <textarea class="f-textarea" data-en placeholder="Space size · Budget range · Preferred style&#10;空間坪數 · 預算範圍 · 希望風格"></textarea>
+        </div>
+      </div>
+      <!-- 送出按鈕：獨立在表單外，靠右對齊 -->
+      <div class="form-submit-row">
+        <button class="btn-submit-gold" onclick="submitForm()">
+          <span data-zh>送出諮詢</span>
+          <span data-en>SEND INQUIRY</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-block">
+        <div class="footer-logo-zh">富璟設計有限公司</div>
+        <div class="footer-logo-en">FUJING DESIGN CO., LTD.</div>
+      </div>
+      <div class="footer-desc" data-zh>統一編號：94072081<br><br>以細膩工藝與溫暖質感，為每位業主打造獨一無二的生活美學。從概念發想到竣工驗收，陪伴您走過每一個細節。</div>
+      <div class="footer-desc" data-en>Business No.: 94072081<br><br>Crafting unique living aesthetics for each client through meticulous craftsmanship and warm materials.</div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-zh>導覽</div>
+      <div class="footer-col-title" data-en>Navigation</div>
+      <ul class="footer-links">
+        <li><a href="#about" data-zh>關於我們</a><a href="#about" data-en>About Us</a></li>
+        <li><a href="#services" data-zh>服務項目</a><a href="#services" data-en>Services</a></li>
+        <li><a href="#works" data-zh>作品集</a><a href="#works" data-en>Works</a></li>
+        <li><a href="#process" data-zh>設計流程</a><a href="#process" data-en>Process</a></li>
+        <li><a href="#contact" data-zh>聯絡我們</a><a href="#contact" data-en>Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-zh>聯絡資訊</div>
+      <div class="footer-col-title" data-en>Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:02-XXXX-XXXX">📞 02-XXXX-XXXX</a></li>
+        <li><a href="mailto:info@fujingdesign.com.tw">✉️ info@fujingdesign.com.tw</a></li>
+        <li><a href="#">💬 LINE: @fujingdesign</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-zh>內部系統</div>
+      <div class="footer-col-title" data-en>System</div>
+      <ul class="footer-links">
+        <li><a href="fujing-platform.html" data-zh>🔐 員工登入</a><a href="fujing-platform.html" data-en>🔐 Staff Login</a></li>
+        <li><a href="fujing-platform.html" data-zh>🔐 業主登入</a><a href="fujing-platform.html" data-en>🔐 Client Login</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy" data-zh>© 2025 富璟設計有限公司 All Rights Reserved.</div>
+    <div class="footer-copy" data-en>© 2025 FUJING DESIGN CO., LTD. All Rights Reserved.</div>
+    <a href="fujing-platform.html" class="footer-login" data-zh>SYSTEM LOGIN</a>
+    <a href="fujing-platform.html" class="footer-login" data-en>SYSTEM LOGIN</a>
+  </div>
+</footer>
+
+<script>
+// CURSOR
+const cur = document.getElementById('cur');
+const ring = document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX; my=e.clientY;
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
+});
+function animRing(){
+  rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(animRing);
+}
+animRing();
+document.querySelectorAll('a,button,.service-row,.work-item,.team-card,.process-step').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{
+    cur.style.transform='translate(-50%,-50%) scale(2.5)';
+    ring.style.width='64px'; ring.style.height='64px'; ring.style.opacity='0.25';
+  });
+  el.addEventListener('mouseleave',()=>{
+    cur.style.transform='translate(-50%,-50%) scale(1)';
+    ring.style.width='40px'; ring.style.height='40px'; ring.style.opacity='1';
+  });
+});
+
+// NAV SCROLL
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY>60);
+});
+
+// LANG
+let lang='zh';
+function setLang(l){
+  lang=l;
+  document.body.classList.toggle('en', l==='en');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
+}
+
+// FADE IN
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+// FORM
+function submitForm(){
+  showToast(lang==='zh'?'✓  諮詢已送出，我們將盡快與您聯繫':'✓  Inquiry sent — we will contact you soon');
+}
+
+// TOAST
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+function toast(m){showToast(m);}
+
+// ── FLOAT LOGIN TOGGLE ──
+function toggleFloatLogin(){
+  const sub = document.getElementById('float-sub');
+  const btn = document.getElementById('float-main-btn');
+  const isOpen = sub.classList.contains('open');
+  sub.classList.toggle('open', !isOpen);
+  btn.style.background = !isOpen ? 'var(--wood)' : 'var(--bark)';
+}
+document.addEventListener('click', e => {
+  const fl = document.getElementById('float-login');
+  if (!fl.contains(e.target)) {
+    document.getElementById('float-sub').classList.remove('open');
+    document.getElementById('float-main-btn').style.background = '';
+  }
+});
+
+
+// ── 漢堡選單 ──
+function openMobMenu(){
+  const overlay = document.getElementById('mob-nav-overlay');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobMenu(){
+  const overlay = document.getElementById('mob-nav-overlay');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function updateMobLang(){
+  const isEn = lang === 'en';
+  document.getElementById('mob-lang-zh').classList.toggle('active', !isEn);
+  document.getElementById('mob-lang-en').classList.toggle('active', isEn);
+}
+// 點擊 overlay 背景關閉
+document.getElementById('mob-nav-overlay').addEventListener('click', function(e){
+  if(e.target === this) closeMobMenu();
+});
+
+</script>
+
+<!-- ── FLOATING LOGIN BUTTON ── -->
+<div class="float-login" id="float-login">
+  <div class="float-login-sub" id="float-sub">
+    <a href="fujing-platform.html?role=client">
+      <span>🏠</span>
+      <span data-zh>業主登入</span><span data-en>Client Login</span>
+    </a>
+    <a href="fujing-platform.html?role=staff">
+      <span>👔</span>
+      <span data-zh>員工登入</span><span data-en>Staff Login</span>
+    </a>
+  </div>
+  <button class="float-login-main" onclick="toggleFloatLogin()" id="float-main-btn">
+    <span class="float-lock-icon">🔐</span>
+    <span data-zh>進入系統</span><span data-en>Login</span>
+  </button>
+</div>
+
+</body>
+</html>
